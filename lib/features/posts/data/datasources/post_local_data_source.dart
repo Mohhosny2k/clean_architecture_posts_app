@@ -9,6 +9,7 @@ import '../models/post_model.dart';
 abstract class PostLocalDataSource {
   Future<List<PostModel>> getCachedPosts();
   Future<Unit> cachePosts(List<PostModel> postModels);
+  //   انا مش عايزه يرجع حاجه هو يحفظ بس 
 }
 
 const CACHED_POSTS = "CACHED_POSTS";

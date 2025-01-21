@@ -14,6 +14,13 @@ abstract class PostRemoteDataSource {
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
+/*  abstract class 
+علشان ابقا مجبر انفذ 
+ولو حبيت اغير او اعدل او اعمل كذا كلاس 
+اقدر اعمل ابلمينت عدد لا نهائي من الكلاسات
+
+ من مبادي 
+ */
 class PostRemoteDataSourceImpl implements PostRemoteDataSource {
   final http.Client client;
 

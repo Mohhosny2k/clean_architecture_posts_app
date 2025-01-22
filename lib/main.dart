@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
+
           BlocProvider(
               create: (_) => di.sl<PostsBloc>()..add(GetAllPostsEvent())),
+              // .. انفذ علطول واجيب الدتا اول ما يشتغل
           BlocProvider(create: (_) => di.sl<AddDeleteUpdatePostBloc>()),
         ],
         child: MaterialApp(

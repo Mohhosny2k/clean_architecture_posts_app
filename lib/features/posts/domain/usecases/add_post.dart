@@ -4,8 +4,8 @@ import '../../../../core/error/failures.dart';
 import '../entities/post.dart';
 import '../repositories/posts_repository.dart';
 
-class AddPostUsecase {
-  final PostsRepository repository;
+class AddPostUsecase {// حقل
+  final PostsRepository repository; // معتمده علي ال يوزكاس     usecase
 
   AddPostUsecase(this.repository);
 

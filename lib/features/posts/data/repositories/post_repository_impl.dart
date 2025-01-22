@@ -42,11 +42,25 @@ class PostsRepositoryImpl implements PostsRepository {
 
   @override
   Future<Either<Failure, Unit>> addPost(Post post) async {
+    // بيجيلي
+    //  entity
+    // مش Post
+    // PostModel
     final PostModel postModel = PostModel(title: post.title, body: post.body);
 
     return await _getMessage(() {
       return remoteDataSource.addPost(postModel);
     });
+    // if (await networkInfo.isConnected) {
+    //   try {
+    //     await remoteDataSource.addPost(postModel);
+    //     return Right(unit);
+    //   } on ServerException {
+    //     return Left(ServerFailure());
+    //   }
+    // } else {
+    //   return Left(OfflineFailure());
+    // }
   }
 
   @override
@@ -54,6 +68,16 @@ class PostsRepositoryImpl implements PostsRepository {
     return await _getMessage(() {
       return remoteDataSource.deletePost(postId);
     });
+    // if (await networkInfo.isConnected) {
+    //   try {
+    //     await remoteDataSource.deletePost(postId);
+    //     return Right(unit);
+    //   } on ServerException {
+    //     return Left(ServerFailure());
+    //   }
+    // } else {
+    //   return Left(OfflineFailure());
+    // }
   }
 
   @override
@@ -64,6 +88,16 @@ class PostsRepositoryImpl implements PostsRepository {
     return await _getMessage(() {
       return remoteDataSource.updatePost(postModel);
     });
+    // if (await networkInfo.isConnected) {
+    //   try {
+    //     await remoteDataSource.updatePost(postModel);
+    //     return Right(unit);
+    //   } on ServerException {
+    //     return Left(ServerFailure());
+    //   }
+    // } else {
+    //   return Left(OfflineFailure());
+    // }
   }
 
   Future<Either<Failure, Unit>> _getMessage(

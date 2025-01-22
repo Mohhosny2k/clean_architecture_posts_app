@@ -15,6 +15,10 @@ part 'add_delete_update_post_state.dart';
 
 class AddDeleteUpdatePostBloc
     extends Bloc<AddDeleteUpdatePostEvent, AddDeleteUpdatePostState> {
+      /* 
+      Dependency Injection
+      زي ن ال بلوك معتمد علي use case
+       */
   final AddPostUsecase addPost;
   final DeletePostUsecase deletePost;
   final UpdatePostUsecase updatePost;

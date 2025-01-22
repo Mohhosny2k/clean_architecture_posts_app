@@ -20,6 +20,7 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
         emit(LoadingPostsState());
 
         final failureOrPosts = await getAllPosts();
+       // failureOrPosts.fold((l) {}, (r) {});
         emit(_mapFailureOrPostsToState(failureOrPosts));
       } else if (event is RefreshPostsEvent) {
         emit(LoadingPostsState());

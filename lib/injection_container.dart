@@ -26,7 +26,15 @@ Future<void> init() async {
       addPost: sl(), updatePost: sl(), deletePost: sl()));
 
 // Usecases
+ /*
+ registerlazySingleton:
+مش بيعمل كريت الا لما احتاجه
+registersingleton:
+#اول يفتح التطبيق
 
+بيعمل كريت فور اول مره وبعدين بيعمل ريترن للانستانس اللي اتعمل
+
+  */
   sl.registerLazySingleton(() => GetAllPostsUsecase(sl()));
   sl.registerLazySingleton(() => AddPostUsecase(sl()));
   sl.registerLazySingleton(() => DeletePostUsecase(sl()));

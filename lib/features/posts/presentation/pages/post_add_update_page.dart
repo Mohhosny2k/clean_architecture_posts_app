@@ -33,6 +33,7 @@ class PostAddUpdatePage extends StatelessWidget {
           child:
               BlocConsumer<AddDeleteUpdatePostBloc, AddDeleteUpdatePostState>(
             listener: (context, state) {
+              // listener  navigate and show snackbar
               if (state is MessageAddDeleteUpdatePostState) {
                 SnackBarMessage().showSuccessSnackBar(
                     message: state.message, context: context);
@@ -45,6 +46,7 @@ class PostAddUpdatePage extends StatelessWidget {
               }
             },
             builder: (context, state) {
+              // builder return widget 
               if (state is LoadingAddDeleteUpdatePostState) {
                 return LoadingWidget();
               }

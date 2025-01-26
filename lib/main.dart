@@ -31,3 +31,38 @@ class MyApp extends StatelessWidget {
             home: PostsPage()));
   }
 }
+ //! Features - posts
+/*  
+اول ما نفتح التطبيق بنعمل ايفينت لل بلوك
++
+بلوك بيكلم ال يوزكاس
++
+يوزكاس بيكلم الريبو
++
+unit: remote data source
+no unit : local data source
+الريبو بيشوف لو في دتا بيكلم ال ريموت دتا سورس لو مفيش ال لوكل الريموت دتا سورس
++
+unit: نفترض في 
+اليموت بيبعت ريكوست لل api 
+ويستني الريسبونس
+____________________
+الدتا سورس بتوصل الرسبونس ده و تحوله لدتا مودل 
+وترجعه للريبو
+____________________
+respostiry :list postmodel  convert list post entity
+بترجع بوست انتتي ل يوزكاس
+ post entity    => usecase
+ usecase => bloc
+*/
+
+///
+///
+/// bloc =>  usecase => respostiry => data source => api => model => entity => ui  => bloc
+/// 
+/// 
+/// ///////////////////////////////////////////////////
+
+//prentation => bloc  {event , state}
+// Dependency Injection   {getit}
+//Ui
